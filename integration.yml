@@ -10,13 +10,13 @@ stages:
     steps:
     - script: |
         dotnet publish \
-        --configuration Release
-        --output out
-        --self-contained
-        --runtime win-x64
-        -p:EnableCompressionInSingleFile=true\
-        -p:PublishSingleFile=true
-        -p:PublishReadyToRun=true
+        --configuration Release \
+        --output out \
+        --self-contained \
+        --runtime win-x64 \
+        -p:EnableCompressionInSingleFile=true \
+        -p:PublishSingleFile=true \
+        -p:PublishReadyToRun=true \
         -p: DibugType=embedded
       displayName: publish .NET console project
 
