@@ -19,4 +19,6 @@ stages:
         -p:PublishReadyToRun=true \
         -p: DibugType=embedded
       displayName: publish .NET console project
-
+    - publish: out/Contoso.Spaces.Console.exe
+      displayName: Upload console app artifact
+      artifact: console-app
